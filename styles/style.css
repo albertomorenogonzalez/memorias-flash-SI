@@ -1,0 +1,325 @@
+/********* hoja de estilos de la página web de memorias flash *********/
+
+/********* estilo general *********/
+
+@font-face {
+    font-family: 'AlegreyaSansSC'; 
+    src: url("../fonts/AlegreyaSansSC-Regular.ttf"); 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color:rgb(0, 12, 68);
+    text-decoration: none;
+}
+
+a:hover {
+    background-color:rgb(160, 183, 204);
+}
+
+body {background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-position: 33%;
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    }
+
+#container {
+            width:80%;
+            margin: auto;
+            background-color: #d3faff;
+        }
+
+.apartado {
+    background-color: #d3faff;
+    padding: 5%;
+    }
+
+h1 {
+    font-size: 2em;
+    }
+
+h1, h2, h3, h4 {
+    font-family: 'AlegreyaSansSC';
+    }
+
+.grid-2c {
+    display:grid;
+    grid-template-columns: auto auto;
+    margin: auto;
+    }
+    
+.item-grid-2c {
+    display: block;
+    width: 80%;
+    text-align: left;
+    margin: auto;
+    }
+
+ul{list-style:none;}
+
+
+/********* estilo de la barra de navegación **********/
+
+nav {position: -webkit-sticky;
+    position:sticky;
+    top:0px;
+    z-index: 3;
+    background-color: rgb(0, 12, 68);
+    }
+    
+.topnav {
+        overflow:hidden;
+        background-color: rgb(0, 12, 68);
+        }
+    
+.topnav a {
+        float: right;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+        font-size: 17px;
+        }
+    
+.topnav a:hover {
+        background-color: #ddd;
+        color: rgb(0, 12, 68);
+        }
+    
+.topnav a:not(:first-child) {display: none;}
+    
+.topnav a.icon {
+                float: left;
+                display: block;
+                }
+
+.topnav a.active {
+                background-color: rgb(0, 12, 68);
+                color: white;
+                }
+
+.topnav.responsive {position: relative;}
+
+.topnav.responsive .icon {
+        position: absolute;
+        left: 0;
+        top: 0;
+        }
+
+.topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+            }
+
+.topnav .icon {
+        display: none;
+        padding:10px 10px 14px;
+        }
+
+/********* estilo de la hero section *********/
+
+#hero {background-image: url(../images/heroSection.jpg);
+        background-size: cover;
+        background-position: 66%;
+        height:70vh;
+        position: relative;
+        }
+
+#title {position: absolute;
+        text-shadow: 3px 3px 3px #31343a;
+        bottom:5px;
+        right:100px;
+        font-size: 3em;
+        }
+
+#author {position: absolute;
+    bottom:5px;
+    right:100px;
+    padding: 10px;
+    }
+    
+img {
+    padding:5%;
+    width:80%;
+    display:block;
+    margin:auto;
+    }
+
+#transistor {
+    width:100%;
+}
+
+/********* estilo de la sección introducción *********/
+
+#fujio {
+    width: 60%;
+}
+
+/********* estilo de la sección tipos *********/
+
+#puerta {
+    width:50%;
+}
+
+#smart-card {
+    width:100%;
+}
+
+#tipos li::before{
+	content: "→";
+	margin-right:8px;
+    font-weight: bolder;
+    }
+
+span {
+    font-weight: bolder;
+}
+
+.buy {
+    text-align: center;
+}
+
+#tabla-usb {
+    width:30%;
+}
+
+#sd {
+    width: 60%;
+}
+
+.grid-2c-2 {
+    display:grid;
+    grid-template-columns: 80% 20%;
+    margin: auto;
+}
+
+.grid-6c {
+    display:grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    margin: auto;
+    }
+
+.item-grid-6c {
+    display: block;
+    width: 80%;
+    text-align: center;
+    margin:auto;
+    padding: 5px;
+    }
+
+.item-grid-6c img {
+    width:70%;
+}
+
+/********* estilo de la seccion instalacion *********/
+
+#instalacion iframe {
+    margin:auto;
+    display: block;
+    }
+
+/********* estilo de la sección principales marcas *********/
+.grid-5c {
+    display:grid;
+    grid-template-columns: auto auto auto auto auto;
+    margin: auto;
+    }
+
+.item-grid-5c {
+    display: block;
+    width: 80%;
+    text-align: center;
+    margin:auto;
+    padding: 5px;
+    }
+
+.item-grid-5c img:hover {
+    background-color: rgb(160, 183, 204);
+    }
+
+#principalesMarcas img {width:60%;}
+
+/********* estilo de la sección de la bibliografía *********/
+
+#bibliografia li::before{
+	content: "🌐";
+	margin-right:8px;
+    }
+
+#bibliografia li:hover {
+    background-color:rgb(160, 183, 204);
+}
+
+/********* estilo del footer *********/
+
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: rgb(0, 12, 68);
+    color: white;
+    }
+
+footer a {color: white;}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+/********* media queries *********/
+
+@media only screen and (max-width: 850px) {
+    .apartado {padding: 10%;}
+
+    #title {font-size: 2em;
+            margin: auto;
+            text-align: center;
+            left: 25%;}
+
+    h1 {font-size: 1.8em;}
+
+    #author {visibility: hidden;}
+
+    .topnav a:not(:first-child) {display: none;}
+
+    .topnav a.icon {
+    float: left;
+    display: block;
+    }
+
+    .topnav.responsive {position: relative;}
+
+    .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    }
+
+    .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left; }
+
+    .grid-2c {grid-template-columns: 100%;}
+    .grid-2c-2 {grid-template-columns: 100%;}
+    .grid-5c {grid-template-columns: 100%;}
+    .grid-6c {grid-template-columns: 100%;}
+    
+    #tabla-usb {
+            width: 70%;
+    }
+
+    iframe {
+        width: 80%;
+    }
+}
